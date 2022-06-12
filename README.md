@@ -79,7 +79,7 @@ As you can see, we were able to get our information from the Local Storage. We n
 
     let newLocalArr = JSON.parse(localStorage.getItem('arr'));
 
-    console.log(typeof(newLocalArr)) // Outpu: object
+    console.log(typeof(newLocalArr)) // Output: object
     console.log(newLocalArr)
 
     // Output: {sale: true, products: Array(3)} not string
