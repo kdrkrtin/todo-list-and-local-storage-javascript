@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Todo List and Local Storage with JavaScript</title>
+</head>
+
+<body class="overflow-hidden">
+  <div class="mr-1" style="position: relative">
+    <div style="position: absolute; top: 0; right: 0">
+      <div id="liveToast" class="toast success" role="alert" aria-live="assertive" aria-atomic="true"
+        data-delay="4000">
+        <div class="toast-body text-center">Listeye eklendi.</div>
+      </div>
+    </div>
+  </div>
+  <div class="mr-1" style="position: relative">
+    <div style="position: absolute; top: 0; right: 0">
+      <div id="liveToast" class="toast error" role="alert" aria-live="assertive" aria-atomic="true"
+        data-delay="4000">
+        <div class="toast-body text-center">Listeye boş ekleme yapamazsınız!</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-8 offset-2 header my-3 d-flex justify-content-center align-items-center flex-column">
+      <img src="https://whaledevops.com/wp-content/themes/whaledevops/assets/img/whaledevops-logo.svg"
+        class="mb-1" alt="" />
+      <h2 class="h1 my-4">Yapılacaklar Listesi</h2>
+      <div class="flex flex-row w-100 my-4">
+        <input type="text" id="task" placeholder="Bugün ne yapacaksın?" class="form-control"/>
+        <span onclick="newElement()" id="liveToastBtn" class="button btn btn-primary px-4">Ekle</span>
+      </div>
+    </div>
+
+    <div class="col-8 offset-2 alertList d-flex d-none">
+      <span class='text-center alert-warning alert w-100'>Liste boş.</span>
+    </div>
+    <ul class="col-8 offset-2 list-group d-none" id="toDoList">
+      
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>
