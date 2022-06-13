@@ -32,12 +32,27 @@
       <img src="https://whaledevops.com/wp-content/themes/whaledevops/assets/img/whaledevops-logo.svg"
         class="mb-1" alt="" />
       <h2 class="h1 my-4">Yapılacaklar Listesi</h2>
-      <div class="flex flex-row w-100 my-4">
+      <div class="d-flex justify-content-between flex-row w-100 my-4">
         <input type="text" id="task" placeholder="Bugün ne yapacaksın?" class="form-control"/>
         <span onclick="newElement()" id="liveToastBtn" class="button btn btn-primary px-4">Ekle</span>
       </div>
     </div>
-
+    <div class="col-8 offset-2 list-head">
+      <div class="head-wrapper d-flex align-items-center">
+        <div class="item todo">
+          <span>Yapılacak İş</span>
+        </div>
+        <div class="item date">
+          <span>Oluşturulma Tarihi</span>
+        </div>
+        <div class="item remove">
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 offset-2">
+      <hr>
+    </div>
     <div class="col-8 offset-2 alertList d-flex d-none">
       <span class='text-center alert-warning alert w-100'>Liste boş.</span>
     </div>

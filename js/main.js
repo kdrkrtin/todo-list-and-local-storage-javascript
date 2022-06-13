@@ -53,7 +53,7 @@ isToDoList.toDoList.length > 0
 
 /* 3. TO DO LIST FUNCTIONS */
 
-function stopAlert(dom){
+function stopAlert(dom) {
     dom.classList.add('active')
     setTimeout(() => {
         dom.classList.remove('active')
@@ -102,7 +102,7 @@ function removeListItem() {
 inputDom.addEventListener('keyup', inpFunction);
 
 function inpFunction(e) {
-    inpValue = e.target.value;
+    e.keyCode === 13 ? newElement() : inpValue = e.target.value;
 }
 
 /* 3.5 DOM CREATE ELEMENT */
@@ -111,14 +111,17 @@ function createElementDom(val, sel) {
     let liDom = document.createElement('li');
     let liButton = document.createElement('button');
     let spanDom = document.createElement('span');
+    let dateDom = document.createElement('span');
     liButton.innerHTML = '&times;';
     liButton.classList.add('btn', 'bg-transparent')
     liButton.addEventListener('click', removeListItem);
     spanDom.innerHTML = val;
     spanDom.addEventListener('click', selectListItem);
-    liDom.append(spanDom);
-    liDom.append(liButton);
+    spanDom.classList.add('list-note');
+    dateDom.innerHTML = `${new Date().getDate()}-${new Date().getMonth() + 1}-${new Date().getFullYear()}`;
+    dateDom.classList.add('date')
     liDom.classList.add('list-item', sel ? 'active' : false);
+    liDom.append(spanDom, dateDom, liButton);
     toDoListDom.append(liDom);
 }
 
